@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr"> <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postrizerz | Premium Custom Frame</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&family=Montserrat:wght@500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="navbar">
+        <div class="logo">POSTRIZERZ.</div>
+        <nav>
+            <a href="#hero">CUSTOMIZE</a>
+            <a href="#gallery">CATEGORIES</a>
+            <a href="#reviews">TESTIMONIALS</a>
+            <a href="#about">ABOUT US</a>
+        </nav>
+        <div class="user-actions">
+            <button class="cart-btn">
+                🛒 <span>BAG</span> <span class="cart-count">0</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="product-showcase">
+        
+        <aside class="left-info">
+            <span class="badge">NEW</span>
+            <h1 class="product-title">PREMIUM<br>CUSTOM FRAME</h1>
+            <p class="price-tag">EGP <span id="price-display">220</span></p>
+            
+            <div class="description">
+                <h3>DESCRIPTION</h3>
+                <p>حول صورتك أو تصميمك المفضل للوحة فنية متكاملة. بنستخدم إطارات PVC تركي عالية الجودة مع زجاج بريميم للحماية وإبراز التفاصيل بأفضل شكل ممكن.</p>
+            </div>
+
+            <div class="upload-section">
+                <input type="file" id="image-upload" accept="image/*" hidden>
+                <label for="image-upload" class="upload-btn">
+                    <span class="upload-icon">⬆️</span> ارفع صورتك من هنا
+                </label>
+            </div>
+
+            <div class="checkout-form" dir="rtl" style="margin-top: 30px;">
+                <h3 style="color: var(--accent-blue); font-size: 14px; margin-bottom: 15px;">بيانات الشحن 🚚</h3>
+                <input type="text" id="custom-name" class="custom-input" placeholder="الاسم بالكامل" required>
+                <input type="tel" id="custom-phone" class="custom-input" placeholder="رقم التليفون" required>
+                <textarea id="custom-address" class="custom-input" placeholder="العنوان بالتفصيل (المحافظة، المنطقة، الشارع)" rows="2" required></textarea>
+            </div>
+        </aside>
+
+        <section class="center-product">
+            <div class="frame-wrapper">
+                <div class="glow-effect"></div> <img id="user-image" src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop" alt="Preview">
+                <img id="frame-overlay" src="frame-mockup.png" alt="">
+            </div>
+        </section>
+
+        <aside class="right-controls">
+            
+            <div class="control-group">
+                <h3>SIZE</h3>
+                <div class="size-options">
+                    <button class="size-btn active" data-price="220">20x30</button>
+                    <button class="size-btn" data-price="300">30x40</button>
+                    <button class="size-btn" data-price="350">40x50</button>
+                    <button class="size-btn" data-price="400">50x70</button>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <h3>COLOR</h3>
+                <div class="color-options">
+                    <div class="color-item">
+                        <button class="color-btn black active" data-color="black"></button>
+                        <span>BLACK</span>
+                    </div>
+                    <div class="color-item">
+                        <button class="color-btn white" data-color="white"></button>
+                        <span>WHITE</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button id="custom-order-btn" class="btn-primary">CONFIRM ORDER 🚀</button>
+            </div>
+        </aside>
+    </main>
+
+    <div class="marquee-container">
+        <div class="marquee-content">
+            <span>✦ PREMIUM PVC FRAMES</span>
+            <span>✦ FAST DELIVERY</span>
+            <span>✦ HD PRINTING</span>
+            <span>✦ 100% SATISFACTION</span>
+            <span>✦ PREMIUM PVC FRAMES</span>
+            <span>✦ FAST DELIVERY</span>
+            <span>✦ HD PRINTING</span>
+            <span>✦ 100% SATISFACTION</span>
+        </div>
+    </div>
+
+    <section class="how-it-works" id="steps">
+        <h2 class="section-title">HOW IT WORKS</h2>
+        <p class="section-subtitle" dir="rtl">خطوات بسيطة عشان تستلم لوحتك</p>
+        
+        <div class="steps-container" dir="rtl">
+            <div class="step-card">
+                <div class="step-icon">1</div>
+                <h4>ارفع صورتك</h4>
+                <p>اختار تصميمك المفضل أو صورتك الشخصية وارفعها بجودة عالية.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-icon">2</div>
+                <h4>اختار المواصفات</h4>
+                <p>حدد المقاس المناسب ليك ولون الفريم اللي يليق على ديكور غرفتك.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-icon">3</div>
+                <h4>استلم لوحتك</h4>
+                <p>هنوصلك الفريم جاهز للتعليق في أسرع وقت وبأعلى جودة طباعة.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery-section" id="gallery">
+        <h2 class="section-title">EXPLORE ARTWORKS</h2>
+        <p class="section-subtitle">اكتشف كوليكشن البوسترات الجاهزة واختار اللي يعبر عنك</p>
+
+        <div class="filter-menu">
+            <button class="filter-btn active" data-filter="all">ALL</button>
+            <button class="filter-btn" data-filter="anime">ANIME</button>
+            <button class="filter-btn" data-filter="gaming">GAMING</button>
+            <button class="filter-btn" data-filter="movies">MOVIES</button>
+            <button class="filter-btn" data-filter="series">SERIES</button>
+            <button class="filter-btn" data-filter="cars">CARS</button>
+            <button class="filter-btn" data-filter="money">MONEY</button>
+            <button class="filter-btn" data-filter="motivation">MOTIVATION</button>
+        </div>
+
+        <div class="gallery-grid" id="dynamic-gallery">
+    </div>
+
+    </section>
+
+    <section class="reviews-section" id="reviews">
+        <h2 class="section-title">WHAT THEY SAY</h2>
+        <p class="section-subtitle">آراء عملائنا في جودة الفريمات والبوسترات</p>
+
+        <div class="reviews-masonry">
+            <div class="review-card">
+                <h4 class="review-author">Ahmed Tarek</h4>
+                <p class="review-text">البوسترات هنا في حتة تانية خالص! جودة الطباعة والـ PVC التركي خلت شكل الأوضة عندي أسطوري. تجربة ممتازة وتوصيل سريع جداً. 🎨</p>
+                <div class="review-stars">★★★★★</div>
+            </div>
+
+            <div class="review-card">
+                <h4 class="review-author">Islam Ahmed</h4>
+                <p class="review-text">I can't thank Postrizerz enough! They took my room setup to the next level. From the frame quality to the image resolution, it's highly recommended! 🔥</p>
+                <div class="review-stars">★★★★★</div>
+            </div>
+
+            <div class="review-card">
+                <h4 class="review-author">Sophie Ramirez</h4>
+                <p class="review-text">The team is truly exceptional. The custom frame option is a game-changer. My setup is looking so premium right now! 🚀</p>
+                <div class="review-stars">★★★★★</div>
+            </div>
+
+            <div class="review-card">
+                <h4 class="review-author">Michael Lee</h4>
+                <p class="review-text">خامة الإزاز البريميم بتدي لمعة للبوستر مش طبيعية. طلبت 3 فريمات وكلهم جم متغلفين كويس جداً ومفيش أي خدش.</p>
+                <div class="review-stars">★★★★★</div>
+            </div>
+
+            <div class="review-card">
+                <h4 class="review-author">Matthew Turner</h4>
+                <p class="review-text">💪 Postrizerz is the real deal! مقاسات مظبوطة بالمللي، وسعر ممتاز مقارنة بالخامات المستوردة دي. الديكور عندي اختلف 180 درجة!</p>
+                <div class="review-stars">★★★★★</div>
+            </div>
+            
+            <div class="review-card">
+                <h4 class="review-author">Sarah Johnson</h4>
+                <p class="review-text">My setup saw remarkable aesthetic growth after getting these frames. The minimalist design of the black PVC is just top-notch!</p>
+                <div class="review-stars">★★★★★</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+        <h2 class="section-title">FAQS</h2>
+        <p class="section-subtitle" dir="rtl">أكتر الأسئلة اللي بتوصلنا</p>
+
+        <div class="faq-container" dir="rtl">
+            <div class="faq-item">
+                <button class="faq-question">هل التوصيل متاح لكل المحافظات؟ <span class="faq-icon">+</span></button>
+                <div class="faq-answer"><p>أيوة، بنوصل للقاهرة والجيزة وكل محافظات مصر في أسرع وقت، وبيكون في شحن مجاني للأوردرات اللي أكتر من قطعة.</p></div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">إيه هي خامة الفريم المستخدمة؟ <span class="faq-icon">+</span></button>
+                <div class="faq-answer"><p>بنستخدم إطارات PVC تركي مستوردة، بتتميز بمتانتها وشكلها البريميم، ومعاها زجاج نقي جداً لحماية الصورة من التراب والبهتان.</p></div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">هل الصور بتطبع بجودة عالية؟ <span class="faq-icon">+</span></button>
+                <div class="faq-answer"><p>أكيد! بنطبع على ورق فوتو عالي الجودة (HD) بألوان زاهية بتبرز كل تفصيلة في صورتك أو تصميمك.</p></div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">إزاي أقدر أعلق الفريم؟ <span class="faq-icon">+</span></button>
+                <div class="faq-answer"><p>الفريم بيوصلك جاهز بمكان للتعليق من الضهر، وتقدر تعلقه بالطول أو بالعرض حسب صورتك بسهولة جداً.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section" id="about">
+        <div class="about-content">
+            <h2 class="section-title">THE POSTRIZERZ STANDARD</h2>
+            <p>في بوسترايزرز، بنحول شغفك واهتماماتك للوحات فنية تنطق على حيطان غرفتك. بنستخدم إطارات PVC تركي عالية الجودة مع زجاج بريميم عشان نضمنلك حماية وألوان تعيش معاك سنين.</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <h2>POSTRIZERZ.</h2>
+                <p>Level up your space.</p>
+            </div>
+            <div class="footer-social">
+                <a href="#" target="_blank">INSTAGRAM</a>
+                <a href="#" target="_blank">FACEBOOK</a>
+                <a href="#" target="_blank">TIKTOK</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 POSTRIZERZ. ALL RIGHTS RESERVED. @postrizerz.eg</p>
+        </div>
+    </footer>
+
+    <div id="payment-popup-custom" class="popup-overlay" style="display: none;">
+        <div class="popup-content" dir="rtl">
+            <h2>🎉 تم حفظ طلبك بنجاح!</h2>
+            <p>عشان نبدأ في تجهيز اللوحة بتاعتك، مطلوب تحويل عربون (50%) لتأكيد الجدية.</p>
+            
+            <div class="deposit-box">
+                <span>المبلغ المطلوب تحويله:</span>
+                <strong id="deposit-amount-custom">0</strong> <span>ج.م</span>
+            </div>
+
+            <div class="payment-methods">
+                <p><strong>طرق الدفع المتاحة:</strong></p>
+                <ul>
+                    <li>📱 انستاباي (InstaPay): <code>ahmedtarek111221@instapay</code></li>
+                    <li>📞 محفظة اتصالات: <code>01125890190</code></li>
+                </ul>
+            </div>
+
+            <p class="whatsapp-note" style="color: #fff; background: rgba(0, 162, 255, 0.2); padding: 10px; border-radius: 8px;">
+                ⚠️ خطوة أخيرة: ابعتلنا <b>اسكرين التحويل + الصورة المطلوب طباعتها</b> على الواتساب عشان نطبعها بأفضل جودة!
+            </p>
+            
+            <a href="https://wa.me/201125890190" target="_blank" class="btn-primary whatsapp-btn">تأكيد وإرسال الصورة 💬</a>
+            <button id="close-popup-custom" class="btn-secondary" style="margin-top: 15px;">إغلاق</button>
+        </div>
+    </div>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
