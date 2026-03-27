@@ -534,12 +534,15 @@ html {
 .whatsapp-btn:hover { background: #1ebe57; box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3); }
 
 /* ========================================== */
-/* تظبيط مقاسات الموبايل (Responsive Design)  */
+/* تظبيط الموبايل الشامل (Responsive)         */
 /* ========================================== */
+
+/* للشاشات اللي أصغر من 768 بيكسل (الموبايلات ومعظم التابلت) */
 @media (max-width: 768px) {
-    /* تظبيط الهيدر والناف بار */
+
+    /* --- 1. الناف بار والهيدر --- */
     .navbar {
-        flex-direction: column;
+        flex-direction: column; /* الناف بار ينزل تحت بعض */
         padding: 15px;
         gap: 15px;
         text-align: center;
@@ -550,54 +553,102 @@ html {
         justify-content: center;
         gap: 10px;
     }
-    nav a { margin: 0; font-size: 12px; }
+    nav a { margin: 0; font-size: 13px; padding: 5px 10px; }
 
-    /* تظبيط منطقة المنتج الرئيسية */
+
+    /* --- 2. الـ Hero Section (الكاستومايزر) - الترتيب الذكي --- */
     .product-showcase {
-        padding: 20px 15px;
+        display: flex;
+        flex-direction: column; /* كل حاجة تنزل تحت بعض */
+        padding: 40px 15px;
         gap: 30px;
+        text-align: center; /* توسيط النصوص */
     }
-    .product-title { font-size: 28px; }
-    .price-tag { font-size: 24px; margin-bottom: 20px; }
+
+    /* تغيير الترتيب البرمجي للعناصر (Order) */
+    .left-info {
+        order: 1; /* العنوان والوصف أول حاجة */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* توسيط السعر */
+    }
+
+    .center-product {
+        order: 2; /* الصورة تظهر تانى حاجة (في النص) */
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 350px; /* ضمان مساحة عشان الصورة متختفيش */
+    }
+
+    .right-controls {
+        order: 3; /* الزراير والسعر والـ Confirm آخر حاجة */
+        padding: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* توسيط الزراير */
+    }
+
+    /* تنسيق العناصر جوه الـ Hero */
+    .product-title { font-size: 32px; line-height: 1.2; }
+    .product-description { font-size: 14px; max-width: 90%; margin: 15px 0; line-height: 1.6;}
+    .price-tag { font-size: 28px; margin-bottom: 25px; }
     
-    /* تظبيط الفريم عشان ميخرجش بره الشاشة */
-    .frame-wrapper {
+    /* الفريم الـ Customized عشان ميخرجش بره الشاشة ويبقى مسطرة */
+    .center-product .frame-wrapper {
         width: 100%;
         max-width: 300px; /* تصغير الفريم على الموبايل */
         height: auto;
+        aspect-ratio: 3 / 4; /* الحفاظ على النسبة الطويلة PVC */
+        position: relative;
     }
 
-    /* تظبيط المعرض (الكروت تنزل تحت بعض) */
-    .gallery-section { padding: 40px 15px; }
+    /* فورم البيانات */
+    .checkout-form { width: 100%; max-width: 320px; }
+    .custom-input { font-size: 14px; }
+
+
+    /* --- 3. المعرض (Gallery) --- */
     .gallery-grid {
-        grid-template-columns: 1fr; /* كارت واحد في كل سطر */
+        grid-template-columns: 1fr; /* كارت واحد كبير في كل سطر للموبايل */
         gap: 20px;
+        padding: 0 10px;
     }
+    .poster-card { max-width: 320px; margin: 0 auto; }
 
-    /* تظبيط خطوات الطلب */
-    .how-it-works { padding: 40px 15px; }
+
+    /* --- 4. خطوات الطلب (Steps) --- */
     .steps-container {
-        flex-direction: column;
+        flex-direction: column; /* الخطوات تنزل تحت بعض */
         align-items: center;
         gap: 20px;
     }
     .step-card { width: 100%; max-width: 320px; }
 
-    /* تظبيط البوب أب بتاع الدفع عشان ميضربش في الجناب */
-    .popup-content {
-        width: 95%;
-        padding: 25px 15px;
-    }
-    .popup-content h2 { font-size: 20px; }
-    .deposit-box strong { font-size: 22px; }
-    .whatsapp-note { font-size: 12px; line-height: 1.5; }
-    .whatsapp-btn { padding: 15px; width: 100%; font-size: 14px; }
 
-    /* تظبيط الفوتر */
+    /* --- 5. الأسئلة الشائعة (FAQ) --- */
+    .faq-items { max-width: 90%; margin: 0 auto; }
+    .faq-question { font-size: 14px; padding: 15px; }
+
+
+    /* --- 6. صفحة الطلب (product.html) --- */
+    /* بنضمن إن الميديا كويري تطبق برضه على الستايل اللي في الـ HTML هناك */
+    body > main.product-showcase {
+        flex-direction: column !important;
+    }
+    
+    body > main.product-showcase .center-product .frame-wrapper {
+        aspect-ratio: 1 / 1 !important; /* الحفاظ على الفريم المربع للمنتجات الجاهزة */
+    }
+
+
+    /* --- 7. الفوتر --- */
     .footer-top {
-        flex-direction: column;
+        flex-direction: column; /* الفوتر ينزل تحت بعض */
         text-align: center;
         gap: 15px;
     }
-    .footer-social { justify-content: center; }
+    .footer-social { justify-content: center; gap: 15px; }
 }
